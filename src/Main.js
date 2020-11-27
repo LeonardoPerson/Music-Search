@@ -10,6 +10,11 @@ const Main = () => {
   const [musicData, setMusicData] = useState([])
   const [error, setError] = useState(null)
 
+  const handleChange = (event) => {
+    const aux = event.target.value
+    setSearchTerm(aux)    
+  } 
+
   return(
     <div>
       <h1 id='appTitle'>Music Search</h1>
@@ -18,7 +23,7 @@ const Main = () => {
         <input
           autoFocus
           type='text'
-          /*onChange={handleChange}*/
+          onChange={handleChange}
           placeholder='Insira o nome do artista ou da música...'
         />
         <button>Search</button>
