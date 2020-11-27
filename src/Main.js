@@ -75,7 +75,23 @@ const Main = () => {
               </div>           
           )}
         </div>         
-      }       
+      }   
+      
+      <div class='scrolling-box'>
+        {musicData.prev && 
+          <button onClick={() => getMoreSongs(musicData.prev)}>
+            <a href="#appTitle">
+              PREVIOUS
+            </a>
+          </button>}
+        {musicData.next && 
+          <button onClick={() => getMoreSongs(musicData.next)}>
+            <a href="#appTitle">
+              NEXT
+            </a>
+          </button>}
+      </div>  
+      
     </div>
   )
 }
