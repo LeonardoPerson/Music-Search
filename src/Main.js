@@ -34,6 +34,17 @@ const Main = () => {
     setSearchTerm(aux)    
   } 
 
+  const getMoreSongs = (url) => {
+    try{
+      axios.get(`${applyCors}${url}`)
+         .then(response => {            
+          setMusicData(response.data)
+         }) 
+    }catch(error){
+      setError(error)
+    }
+  }
+
   return(
     <div>
       <h1 id='appTitle'>Music Search</h1>
@@ -91,7 +102,7 @@ const Main = () => {
             </a>
           </button>}
       </div>  
-      
+
     </div>
   )
 }
