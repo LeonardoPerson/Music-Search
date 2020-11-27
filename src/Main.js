@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import axios from 'axios'
 
 const apiURL = `https://api.lyrics.ovh/`
 const applyCors = 'https://cors-anywhere.herokuapp.com/'
@@ -10,6 +11,24 @@ const Main = () => {
   const [musicData, setMusicData] = useState([])
   const [error, setError] = useState(null)
 
+  const searchLyric = (event) => {
+    event.preventDefault() 
+    setMusicData([])
+    if(searchTerm){
+      setTermWarning(false)        
+      try{
+        axios.get(`${apiURL}/suggest/${searchTerm.trim()}`)
+        .then(response => {     
+          setMusicData(response.data)
+        })
+      }catch(error){
+        setError(error)
+      }         
+    }else{
+      setTermWarning(true)
+    }
+  }
+
   const handleChange = (event) => {
     const aux = event.target.value
     setSearchTerm(aux)    
@@ -19,7 +38,7 @@ const Main = () => {
     <div>
       <h1 id='appTitle'>Music Search</h1>
       
-      <form /*onSubmit={searchLyric}*/ autoComplete="on">
+      <form onSubmit={searchLyric} autoComplete="on">
         <input
           autoFocus
           type='text'
