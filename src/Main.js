@@ -46,7 +46,36 @@ const Main = () => {
           placeholder='Insira o nome do artista ou da música...'
         />
         <button>Search</button>
-      </form>     
+      </form> 
+      <div data-testid="warning-text">
+        {termWarning && <div>Enter a valid value</div>} 
+      </div>
+      
+      {
+        error ? <div>Something went wrong ...</div>
+        :      
+        <div data-testid="show-name"> 
+          {musicData.data && musicData.data.map(item =>                            
+              <div key={item.id}>
+                <div>{item.artist.name}</div> 
+                <div>Song: {item.title}</div> 
+                <div>{item.album.type}: {item.album.title}</div>
+                
+                <img 
+                  src={item.album.cover_medium ? item.album.cover_medium:imageAlternative} 
+                  alt="album cover"
+                />
+
+                <audio controls>
+	                <source src={item.preview} type="audio/mpeg"/>
+                </audio>
+
+                <br/>
+                <br/>
+              </div>           
+          )}
+        </div>         
+      }       
     </div>
   )
 }
