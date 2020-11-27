@@ -1,8 +1,7 @@
 import {useState} from 'react'
 import axios from 'axios'
+import {apiURL, applyCors} from './api'
 
-const apiURL = `https://api.lyrics.ovh/`
-const applyCors = 'https://cors-anywhere.herokuapp.com/'
 const imageAlternative = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
 
 const Main = () => {
