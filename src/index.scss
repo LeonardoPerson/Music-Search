@@ -60,7 +60,13 @@ a {
 
 img {
   display: block;
-  width: 100%;
+  width: 70%;
+  margin-bottom: 1rem;
+  justify-items: center;  
+}
+
+audio {
+  padding: 1.5rem;;
 }
 
 ul {
@@ -75,7 +81,7 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  background: #be3144;
+  background: $main-red;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -125,8 +131,12 @@ ul {
 }
 
 /* Music section ----------------------------------------------------*/
+.form {
+  margin-bottom: 5rem;
+}
+
 .search-button{
-  padding: 1rem;
+  padding: 0.8rem;
   color: $main-white;
   background-color: $main-blue;
   font-weight: 600;
@@ -168,11 +178,12 @@ ul {
 .previous-button:focus, .next-button:focus{
   outline: none;
 }
+
 .input-search {
   height: 3rem;
   width: 40rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;  
+  font-size: 1.5rem;  
 }
 
 .input-search:focus{
@@ -191,11 +202,20 @@ ul {
 .music-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
+  grid-gap: 5rem;
+  width: 95%;
   max-width: 1280px;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  margin-bottom: 6rem;  
+}
+
+.card-song{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #485062;
+  border-radius: 10px;
 }
 
 @media (max-width: 30.625em) {
@@ -210,6 +230,8 @@ ul {
 
 .song-information{
   height: 17rem;
+  margin: 1rem;
+  font-size: 1.5rem;
 }
 
 .song-title {

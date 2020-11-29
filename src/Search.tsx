@@ -77,16 +77,18 @@ const Search = () => {
 
       {/*Form for input any song or artist ----------------------------------*/}
       <section id="music" className="music-section">
-        <form onSubmit={searchLyric} autoComplete='on'>
-          <input
-            className='input-search'
-            autoFocus
-            type='text'
-            onChange={handleChange}
-            placeholder='Enter the name of the artist or song ...'
-          />
-          <button className='search-button'>Search</button>
-        </form> 
+        <div className='form'>
+          <form onSubmit={searchLyric} autoComplete='on'>
+            <input
+              className='input-search'
+              autoFocus
+              type='text'
+              onChange={handleChange}
+              placeholder='Enter the name of the artist or song ...'
+            />
+            <button className='search-button'>Search</button>
+          </form> 
+        </div>
 
         {/*Checking if the entered value is valid------------------------------*/}
         <div>
@@ -101,12 +103,12 @@ const Search = () => {
           <div className="music-grid"> 
             {musicData?.data.map(item =>   
 
-              <div key={item.id}>
+              <div key={item.id} className='card-song'>
                 <div className='song-information'>
                   <div className="song-title">{item.artist.name}</div> 
                   <div>Song: {item.title}</div> 
                   <div>Album: {item.album.title}</div>  
-                </div>            
+                </div>          
                 <img 
                   className="album-image"
                   src={item.album.cover_big ? item.album.cover_big:imageAlternative} 
