@@ -5,10 +5,10 @@ const Header = () => {
     <nav id="navbar" className="nav">
       <ul className="nav-list">
         <li>
-          <a href="#welcome-section">About</a>
+          <a href="#about-section">About</a>
         </li>
         <li>
-          <a href="#projects">Songs</a>
+          <a href="#music">Songs</a>
         </li>
         <li>
           <a href="#contact">Contact</a>
