@@ -120,14 +120,14 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;  
+  height: 100vh; 
 }
 
 .about-section > p {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: #be3144;
+  color: $main-red;
 }
 
 /* Music section ----------------------------------------------------*/
