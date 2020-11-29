@@ -1,9 +1,10 @@
 <ul>
-<li>O projeto "Music Search" consome api do Deezer para retornar algumas informações de músicas pesquisadas pelo usuário. Basta digitar no campo de pesquisa o nome do artista ou nome da musica para que o retorno ocorra.
-<li>Pelo modo de desenvolvimento, o projeto pode ser acessado executando npm start or yarn start no diretório raiz do projeto. 
-A aplicação está também em produção para que possa mais facilmente ser verificada: 
-<li>O projeto foi desenvolvido pelo sistema operacional windows 10 com 64 bits, processador Intel Core i5, editor visual studio code, navegador Chrome versão 87.0.4280.66.
-<li>As tecnologias utilizadas foram react com hooks, typescript e scss.
-<li>Segue uma prévia da página:
+<li>The "Music Search" project uses Deezer api to return some information of songs searched by the user. Just enter the name of the artist or name of the song in the search field for the return to occur.
+<li>Through the development mode, the project can be accessed by running npm start or yarn start in the project's root directory.
+The application is also in production so that it can be more easily verified:
+<li>The project was developed by the Windows 10 operating system with 64 bits, Intel Core i5 processor, visual studio code editor, Chrome browser version 87.0.4280.66.
+<li>The technologies used were react with hooks, typescript and scss.
+<li>A preview of the page follows:
 <ul>
+ <br/>
 <img src='./public/page.png'/>
