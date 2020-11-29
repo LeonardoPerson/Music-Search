@@ -1,6 +1,6 @@
 import {ChangeEvent, FormEvent, useState} from 'react'
 import axios from 'axios'
-import {apiURL, applyCors} from './Api'
+import {apiURL, applyCors} from '../Api'
 
 const imageAlternative = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
 
@@ -69,14 +69,14 @@ const Search = () => {
   }
 
   return(
-    <div className = "scrolling-box">
-      <section id="about-section" className="about-section">
+    <div className = 'scrolling-box'>
+      <section id='about-section' className='about-section'>
         <h1>Music Search</h1>
         <p>Discover your favorite songs</p>      
       </section>
 
       {/*Form for input any song or artist ----------------------------------*/}
-      <section id="music" className="music-section">
+      <section id='music' className='music-section'>
         <div className='form'>
           <form onSubmit={searchLyric} autoComplete='on'>
             <input
@@ -95,22 +95,22 @@ const Search = () => {
           {termWarning && <div className='warning-text'>Enter a valid name</div>} 
         </div>
         
-        {/*display of data returned by the api---------------------------------*/}
+        {/*display of data returned by the api-------------------------------*/}
         {
           error ? 
           <div>Something went wrong ...</div>
           :      
-          <div className="music-grid"> 
+          <div className='music-grid'> 
             {musicData?.data.map(item =>   
 
               <div key={item.id} className='card-song'>
                 <div className='song-information'>
-                  <div className="song-title">{item.artist.name}</div> 
+                  <div className='song-title'>{item.artist.name}</div> 
                   <div>Song: {item.title}</div> 
                   <div>Album: {item.album.title}</div>  
                 </div>          
                 <img 
-                  className="album-image"
+                  className='album-image'
                   src={item.album.cover_big ? item.album.cover_big:imageAlternative} 
                   alt='album cover'
                 />
