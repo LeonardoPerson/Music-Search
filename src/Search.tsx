@@ -79,17 +79,18 @@ const Search = () => {
       <section id="music" className="music-section">
         <form onSubmit={searchLyric} autoComplete='on'>
           <input
+            className='input-search'
             autoFocus
             type='text'
             onChange={handleChange}
-            placeholder='Insira o nome do artista ou da música...'
+            placeholder='Enter the name of the artist or song ...'
           />
-          <button>Search</button>
+          <button className='search-button'>Search</button>
         </form> 
 
         {/*Checking if the entered value is valid------------------------------*/}
         <div>
-          {termWarning && <div>Enter a valid value</div>} 
+          {termWarning && <div className='warning-text'>Enter a valid name</div>} 
         </div>
         
         {/*display of data returned by the api---------------------------------*/}
@@ -123,8 +124,8 @@ const Search = () => {
         <div className='scrolling-box'>
           {
             musicData?.prev && 
-              <button onClick={() => getMoreSongs(musicData.prev)}>
-                <a href='#appTitle'>
+              <button onClick={() => getMoreSongs(musicData.prev)} className='previous-button'>
+                <a href='#music'>
                   PREVIOUS
                 </a>
               </button>
@@ -132,8 +133,8 @@ const Search = () => {
 
           {
             musicData?.next && 
-              <button onClick={() => getMoreSongs(musicData.next)}>
-                <a href='#appTitle'>
+              <button onClick={() => getMoreSongs(musicData.next)} className='next-button'>
+                <a href='#music'>
                   NEXT
                 </a>
               </button>

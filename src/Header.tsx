@@ -2,7 +2,7 @@
 
 const Header = () => {
   return(
-    <nav id="navbar" className="nav">
+    <header id="navbar" className="nav">
       <ul className="nav-list">
         <li>
           <a href="#about-section">About</a>
@@ -14,7 +14,7 @@ const Header = () => {
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </nav>  
+    </header>  
   )
 }
 

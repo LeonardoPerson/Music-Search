@@ -125,6 +125,63 @@ ul {
 }
 
 /* Music section ----------------------------------------------------*/
+.search-button{
+  padding: 1rem;
+  color: $main-white;
+  background-color: $main-blue;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:focus{
+  outline: none;
+}
+
+.search-button:hover{
+  background-color: #37445f;
+  transition: 0.5s;
+}
+
+.previous-button, .next-button {
+  padding: 1rem;
+  margin: 1rem;
+  color: $main-white;
+  width: 15rem;
+  background-color: $main-blue;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer; 
+}
+
+.previous-button:hover, .next-button:hover {
+  background-color: #37445f;
+  transition: 0.5s;
+}
+
+.previous-button:focus, .next-button:focus{
+  outline: none;
+}
+.input-search {
+  height: 3rem;
+  width: 40rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;  
+}
+
+.input-search:focus{
+  outline: none;
+}
+
+.warning-text{
+  padding: 2rem;
+}
 
 .music-section {
   text-align: center;
@@ -141,7 +198,6 @@ ul {
   margin-bottom: 6rem;
 }
 
-
 @media (max-width: 30.625em) {
   .about-section {
     padding: 6rem 1rem;
@@ -153,8 +209,7 @@ ul {
 }
 
 .song-information{
-  height: 15rem;
-
+  height: 17rem;
 }
 
 .song-title {

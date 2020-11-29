@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return(
-    <section id="contact" className="contact-section">
+    <footer id="contact" className="contact-section">
       <div className="contact-section-header">
         <h2>Let's work together...</h2>
       </div>
@@ -21,7 +21,7 @@ const Footer = () => {
           ><i className="fab fa-github"></i> GitHub</a
         >
       </div>
-    </section>
+    </footer>
   )
 }
 
