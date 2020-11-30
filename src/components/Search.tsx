@@ -1,3 +1,4 @@
+import React from 'react'
 import {ChangeEvent, FormEvent, useState} from 'react'
 import axios from 'axios'
 import {apiURL, applyCors} from '../Api'
@@ -99,29 +100,18 @@ const Search = () => {
         {
           error ? 
           <div>Something went wrong ...</div>
-          :      
-          <div className='music-grid'> 
-            {musicData?.data.map(item =>   
-
-              <div key={item.id} className='card-song'>
-                <div className='song-information'>
-                  <div className='song-title'>{item.artist.name}</div> 
-                  <div>Song: {item.title}</div> 
-                  <div>Album: {item.album.title}</div>  
-                </div>          
-                <img 
-                  className='album-image'
-                  src={item.album.cover_big ? item.album.cover_big:imageAlternative} 
-                  alt='album cover'
-                />
-                <audio controls>
-                  <source src={item.preview} type='audio/mpeg'/>
-                </audio>
-              </div>           
-            )}
-          </div>         
+          :   
+          musicData?.data.map(item =>
+            <div key={item.id} className='card-song'>               
+                <div className='song-title'>{item.artist.name}</div> 
+                <div>Song: {item.title}</div> 
+                <div>Album: {item.album.title}</div>                
+            </div>           
+          )
+       
         }   
         
+        {console.log(musicData?.data)}
         {/*showing the buttons to change the page------------------------------*/}
         <div className='scrolling-box'>
           {

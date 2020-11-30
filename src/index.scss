@@ -50,10 +50,6 @@ code {
     monospace;
 }
 
-#root {
-  height: 100%;
-}
-
 h1, h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -73,6 +69,7 @@ a {
   color: $main-white;
 }
 
+/*
 img {
   display: block;
   width: 70%;
@@ -83,7 +80,7 @@ img {
 audio {
   padding: 2rem;
   margin-bottom: 1rem;
-}
+}*/
 
 ul {
   list-style: none;
@@ -136,7 +133,7 @@ ul {
 
 /* Music section ----------------------------------------------------*/
 .form {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .search-button{
@@ -155,6 +152,40 @@ ul {
 .search-button:hover{
   background-color: #37445f;
   transition: 0.5s;
+}
+
+.input-search {
+  @include widthHeight(40rem, 3rem);
+  font-family: $font-family;
+  font-size: 1.5rem;  
+}
+
+.input-search:focus{
+  outline: none;
+}
+
+.warning-text{
+  padding: 2rem;
+}
+
+.music-section {
+  text-align: center;
+  padding: 10rem 0;
+}
+
+.card-song{
+  @extend .displayFlexCenter; 
+  flex-direction: column;
+  background-color: $main-blue-clear;
+  border-radius: 10px;  
+  margin: 3rem auto;
+  padding: 2rem;
+  width: 50%; 
+  font-size: 1.5rem;
+}
+
+.song-title {
+  font-size: 2rem; 
 }
 
 .previous-button, .next-button {
@@ -177,53 +208,7 @@ ul {
   outline: none;
 }
 
-.input-search {
-  @include widthHeight(40rem, 3rem);
-  font-family: $font-family;
-  font-size: 1.5rem;  
-}
 
-.input-search:focus{
-  outline: none;
-}
-
-.warning-text{
-  padding: 2rem;
-}
-
-.music-section {
-  text-align: center;
-  padding: 10rem 0;
-}
-
-.music-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 5rem;
-  width: 95%;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;  
-}
-
-.card-song{
-  @extend .displayFlexCenter;
-  flex-direction: column;  
-  background-color: $main-blue-clear;
-  border-radius: 10px;
-}
-
-
-.song-information{
-  height: 17rem;
-  margin: 1rem;
-  font-size: 1.5rem;
-}
-
-.song-title {
-  font-size: 2rem;
-  padding: 2rem 0.5rem;
-}
 
 /*Footer------------------------------------------------------*/
 .contact-section {
@@ -258,7 +243,7 @@ ul {
 
 /*Media query-------------------------------------------------*/
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   h1 {
     font-size: 3rem;
   }
@@ -280,11 +265,15 @@ ul {
   }
 
   .input-search {
-    @include widthHeight(70%, 3rem);
+    @include widthHeight(60%, 3rem);
+  }
+
+  .card-song{ 
+    width: 80%;     
   }
   
   .contact-section-header > h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .contact-details {
@@ -297,7 +286,5 @@ ul {
     padding: 6rem 1rem;
   }
 
-  .music-grid {
-    grid-template-columns: 1fr;
-  }
+ 
 }
