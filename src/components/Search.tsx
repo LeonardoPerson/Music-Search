@@ -2,8 +2,6 @@ import React from 'react'
 import {ChangeEvent, FormEvent, useState} from 'react'
 import axios from 'axios'
 import {apiURL, applyCors} from '../Api'
-import ScrollAnimation from 'react-animate-on-scroll'
-
 
 const imageAlternative = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
 
