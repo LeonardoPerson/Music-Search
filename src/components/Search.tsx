@@ -2,6 +2,8 @@ import React from 'react'
 import {ChangeEvent, FormEvent, useState} from 'react'
 import axios from 'axios'
 import {apiURL, applyCors} from '../Api'
+import ScrollAnimation from 'react-animate-on-scroll'
+
 
 const imageAlternative = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
 
@@ -70,10 +72,11 @@ const Search = () => {
   }
 
   return(
-    <div className = 'scrolling-box'>
+    
+    <div className = 'scrolling-box'>     
       <section id='about-section' className='about-section'>
         <h1>Music Search</h1>
-        <p>Discover your favorite songs</p>      
+        <p>Discover your favorite songs</p>    
       </section>
 
       {/*Form for input any song or artist ----------------------------------*/}
@@ -82,7 +85,6 @@ const Search = () => {
           <form onSubmit={searchLyric} autoComplete='on'>
             <input
               className='input-search'
-              autoFocus
               type='text'
               onChange={handleChange}
               placeholder='Enter the name of the artist or song ...'
@@ -133,6 +135,7 @@ const Search = () => {
           }
         </div>
       </section>
+   
     </div>
   )
 }
