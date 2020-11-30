@@ -73,7 +73,7 @@ const Search = () => {
 
   return(
     
-    <div className = 'scrolling-box'>     
+    <div>     
       <section id='about-section' className='about-section'>
         <h1>Music Search</h1>
         <p>Discover your favorite songs</p>    
