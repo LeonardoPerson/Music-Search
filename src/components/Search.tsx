@@ -85,7 +85,7 @@ const Search = () => {
               className='input-search'
               type='text'
               onChange={handleChange}
-              placeholder='Enter the name of the artist or song ...'
+              placeholder='Enter the artist or song ...'
             />
             <button className='search-button'>Search</button>
           </form> 
