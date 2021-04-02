@@ -72,7 +72,7 @@ const Search = () => {
     <div>     
       <section id='about-section' className='about-section'>
         <h1>Music Search</h1>
-        <p>Discover your favorite songs</p>    
+        <p>Discover the 15 best songs of your favorite artist</p>    
       </section>
 
       {/*Form for input any song or artist ----------------------------------*/}
@@ -110,8 +110,9 @@ const Search = () => {
         }   
         
         {console.log(musicData?.data)}
+        {console.log(error)}
         {/*showing the buttons to change the page------------------------------*/}
-        <div className='scrolling-box'>
+        {/*<div className='scrolling-box'>
           {
             musicData?.prev && 
               <button onClick={() => getMoreSongs(musicData.prev)} className='previous-button'>
@@ -130,6 +131,7 @@ const Search = () => {
               </button>
           }
         </div>
+        */}
       </section>
    
     </div>
